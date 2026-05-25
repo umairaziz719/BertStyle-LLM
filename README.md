@@ -1,45 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <h1>Fine-Tuning mBART-50 for English to Urdu Translation</h1>
-  <p>This repository contains code for fine-tuning the mBART-50 model for English to Urdu translation using personalized data. The process involves data preparation, model training, and evaluation.</p>
+# BertStyle-LLM
 
-  <h2>Introduction</h2>
-  <p>In this project, we fine-tune the mBART-50 model to translate English text into Urdu. We utilize personalized data and guide users through each step of the process, from data preparation to model input. The fine-tuning process is conducted using 2 T4 GPUs for efficient training.</p>
+This repository contains an implementation of a BERT-style Large Language Model (LLM) for various Natural Language Processing (NLP) tasks. The project focuses on leveraging transformer architectures for tasks such as text classification, sentiment analysis, and question answering.
 
-  <h2>Getting Started</h2>
-  <ol>
-    <li>Install the required libraries:
-      <pre><code>pip install datasets</code></pre>
-      <pre><code>pip install transformers[torch]</code></pre>
-      <pre><code>pip install accelerate -U</code></pre>
-    </li>
-    <li>Clone this repository:
-      <pre><code>git clone &lt;https://github.com/umairaziz999/BERT-Style-LLM-Assignment.git&gt;</code></pre>
-    </li>
-    <li>Run the notebook <code>LLM_Assignment.ipynb</code> in a Jupyter environment or any compatible environment.</li>
-  </ol>
+## Features
 
-  <h2>Data Preparation</h2>
-  <p>We utilize the "opus100" dataset from Hugging Face, containing English and Urdu text samples. The dataset is preprocessed and divided into training and validation sets. The data is then formatted into CSV files for ease of handling.</p>
+- **Transformer Architecture:** Utilizes a BERT-like transformer encoder for robust language understanding.
+- **Pre-training:** Demonstrates pre-training strategies for masked language modeling and next sentence prediction.
+- **Fine-tuning:** Examples of fine-tuning the model for downstream NLP tasks.
+- **Sentiment Analysis:** Application of the model for sentiment classification.
+- **Text Classification:** General text classification capabilities.
 
-  <h2>Model Training</h2>
-  <p>The model used for fine-tuning is the mBART-50 model, which is loaded and trained on the personalized data. The training process is managed using the <code>Seq2SeqTrainer</code> from the Hugging Face <code>transformers</code> library.</p>
+## Technologies Used
 
-  <h2>Evaluation</h2>
-  <p>The trained model is evaluated using validation data to assess its translation performance. Training and validation loss curves are plotted to visualize the training progress and model performance.</p>
+- **Python**
+- **TensorFlow / PyTorch** (depending on implementation details)
+- **Hugging Face Transformers library**
+- **Jupyter Notebooks** for experimentation and demonstration
 
-  <h2>Testing</h2>
-  <p>Users can test the trained model on custom prompts to translate English text into Urdu. The model's responses are generated using the <code>text2text-generation</code> pipeline from the <code>transformers</code> library.</p>
+## Getting Started
 
-  <h2>Results</h2>
-  <p>The fine-tuned mBART-50 model demonstrates promising performance in translating English to Urdu text. The evaluation metrics and sample translations are provided in the notebook.</p>
+To get a local copy up and running, follow these simple steps.
 
-  <h2>License</h2>
-  <p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
-</body>
-</html>
+### Prerequisites
+
+- Python 3.x
+- pip
+
+### Installation
+
+1. Clone the repo
+   ```bash
+   git clone https://github.com/umairaziz719/BertStyle-LLM.git
+   ```
+2. Navigate to the project directory
+   ```bash
+   cd BertStyle-LLM
+   ```
+3. Install dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+   (Note: A `requirements.txt` file may need to be created if not present)
+
+## Usage
+
+Examples of how to use the model for various NLP tasks will be provided in Jupyter notebooks within the `notebooks/` directory.
+
+## Contributing
+
+Contributions are welcome! Please feel free to open issues or submit pull requests.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Umair Aziz - [Your Email/LinkedIn]
+
+Project Link: [https://github.com/umairaziz719/BertStyle-LLM](https://github.com/umairaziz719/BertStyle-LLM)
